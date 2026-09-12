@@ -3,7 +3,7 @@ name: Lint
 on:
   push:
     branches:
-      - main
+      - ci/node-test-file-paths
   pull_request:
 
 jobs:
