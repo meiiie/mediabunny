@@ -3,7 +3,7 @@ name: Build check
 on:
   push:
     branches:
-      - main
+      - ci/stereo-upmix-nan
   pull_request:
 
 jobs:
