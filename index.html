@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>BufferTarget finalization</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:38px 52px;background:#f4f6f8;color:#14202e;font:18px/1.45 system-ui,sans-serif}h1{font-size:32px;margin:0 0 8px}p{margin:8px 0}small,.muted{color:#526274}button{font:inherit;padding:9px 18px;background:#214b76;color:white;border:0;border-radius:5px;margin:16px 8px 16px 0}button:disabled{opacity:.4}.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:white;padding:22px;border:1px solid #cad4df;border-radius:7px}h2{font-size:22px;margin:0 0 6px}.state{height:28px;color:#395a78}.metric{font-size:32px;font-weight:650;margin:12px 0 0;font-variant-numeric:tabular-nums}.label{font-size:16px;color:#526274}.detail{font-size:15px;font-family:ui-monospace,Consolas,monospace;white-space:pre-wrap;margin-top:14px;word-break:break-all}#result{font-size:21px;min-height:32px;margin-top:18px;color:#145637}.notes{font-size:14px;line-height:1.6;margin-top:15px}code{font:inherit;font-family:ui-monospace,Consolas,monospace}
+</style></head><body>
+<h1>BufferTarget finalization</h1>
+<p>Actual browser conversion of <code>trim-buck-bunny-ffmpeg.ts</code> to MP4.</p>
+<p class="muted">The callback waits on a controlled promise to model an upload in progress.</p>
+<button id="run">Run both conversions</button><button id="release" disabled>Release callbacks</button>
+<div class="cards"><div class="card" id="baseline"><h2>Before</h2><div class="state">Ready</div><div class="metric">—</div><div class="label">bytes in distinct target backing buffers</div><div class="detail">Conversion has not run.</div></div><div class="card" id="candidate"><h2>After the two-line fix</h2><div class="state">Ready</div><div class="metric">—</div><div class="label">bytes in distinct target backing buffers</div><div class="detail">Conversion has not run.</div></div></div>
+<div id="result">Ready to compare.</div>
+<div class="notes">This counts buffer capacity reachable from the target, not process RAM or peak memory.<br>MP4 creation time is fixed for byte comparison. No speedup or avoided crash is claimed.<br>Base source: f630141a4ac2936d00af14bf8ff2c5bb62b66150. Recording uses real browser screenshots.</div>
+<script src="/baseline.js"></script><script src="/candidate.js"></script><script src="/demo.js"></script>
+</body></html>

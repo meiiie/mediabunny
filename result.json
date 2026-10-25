@@ -1,0 +1,27 @@
+{
+  "node": "v24.19.0",
+  "fixture": "test/public/trim-buck-bunny-ffmpeg.ts",
+  "fixtureSha256": "6b7574cf5dee534b3c4e9940576286d716f2f05504dd34e3e4b62560770ecb18",
+  "byteIdentical": true,
+  "retainedReductionBytes": 8388608,
+  "results": [
+    {
+      "name": "baseline",
+      "commit": "f630141a4ac2936d00af14bf8ff2c5bb62b66150",
+      "targetSourceSha256": "5c85d8a8c587aef208775302183e8865e51d46a3b540542e98a49d9494ab64db",
+      "outputBytes": 7090642,
+      "outputSha256": "dd807ff6247e61bf7a356ff3f6938767fa99b601206efab8fcd0f2612c2f612f",
+      "retainedInCallbackBytes": 15479250,
+      "retainedAfterFinalizeBytes": 15479250
+    },
+    {
+      "name": "candidate",
+      "commit": "8ab42a1139fa426da363f3b2b390bdf4923f6fac",
+      "targetSourceSha256": "c8bcdcc76048640a8e915dbce237898af3d8b7472a7fb9d7d6c0780df5a428d6",
+      "outputBytes": 7090642,
+      "outputSha256": "dd807ff6247e61bf7a356ff3f6938767fa99b601206efab8fcd0f2612c2f612f",
+      "retainedInCallbackBytes": 7090642,
+      "retainedAfterFinalizeBytes": 7090642
+    }
+  ]
+}
